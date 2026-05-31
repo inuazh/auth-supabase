@@ -1,11 +1,8 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ProtectedRoute } from './auth/ProtectedRoute';
 import { PublicRoute } from './auth/PublicRoute';
+import AuthPage from './pages/AuthPage';
 
-// Temporary
-function LoginPlaceholder() {
-  return <div className="p-8 text-xl">Login page (TODO)</div>;
-}
 function DashboardPlaceholder() {
   return <div className="p-8 text-xl">Dashboard (protected) ✅</div>;
 }
@@ -18,7 +15,7 @@ export default function App() {
         path="/login"
         element={
           <PublicRoute>
-            <LoginPlaceholder />
+            <AuthPage />
           </PublicRoute>
         }
       />
