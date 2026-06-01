@@ -2,10 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { ProtectedRoute } from './auth/ProtectedRoute';
 import { PublicRoute } from './auth/PublicRoute';
 import AuthPage from './pages/AuthPage';
-
-function DashboardPlaceholder() {
-  return <div className="p-8 text-xl">Dashboard (protected) ✅</div>;
-}
+import Dashboard from './pages/Dashboard';
 
 export default function App() {
   return (
@@ -23,7 +20,7 @@ export default function App() {
         path="/dashboard"
         element={
           <ProtectedRoute>
-            <DashboardPlaceholder />
+            <Dashboard />
           </ProtectedRoute>
         }
       />
